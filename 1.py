@@ -1,13 +1,32 @@
 import customtkinter as ctk
 
 ctk.set_appearance_mode("dark")
+ctk.set_default_color_theme("blue")
 
-root = ctk.CTk()  
+root = ctk.CTk()
 root.title("Менеджер целей")
 root.geometry("1000x600")
 
+header_frame = ctk.CTkFrame(root, fg_color="transparent")
+header_frame.pack(fill="x", padx=20, pady=20)
+
+title_label = ctk.CTkLabel(
+    header_frame,
+    text="Мои напоминания",
+    font=ctk.CTkFont(size=24, weight="bold")
+)
+title_label.pack(anchor="w")
+
+subtitle_label = ctk.CTkLabel(
+    header_frame,
+    text="Управляй своими целями и задачами",
+    font=ctk.CTkFont(size=14),
+    text_color="gray"
+)
+subtitle_label.pack(anchor="w", pady=(5, 0))
+
 scroll_frame = ctk.CTkScrollableFrame(root)
-scroll_frame.pack(fill="both", expand=True, padx=20, pady=(20, 80))
+scroll_frame.pack(fill="both", expand=True, padx=20, pady=(0, 80))
 
 def button_event():
     entry = ctk.CTkEntry(scroll_frame, placeholder_text="Введите цель...", width=300)
