@@ -1,1 +1,1 @@
-# stitchorstas
+чтобы запустить проект надо скачать библиотеку CustomTkinter чтобы установить надо в терминал написать команду для Windows pip install customtkinter для Mac pip3 install customtkinter
